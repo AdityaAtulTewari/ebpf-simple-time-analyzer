@@ -1,0 +1,38 @@
+{
+  "uprobe" :
+  {
+    "/var/local/adityat/perf/libs/libpthread-2.31.so" :
+    [
+      "pthread_mutex_lock",
+      "pthread_cond_broadcast",
+      "pthread_cond_wait",
+      "pthread_mutex_unlock",
+      "pthread_barrier_wait",
+      "pthread_cond_signal",
+      "pthread_mutex_trylock",
+      "pthread_exit"
+    ]
+  },
+  "uretprobe" :
+  {
+    "/var/local/adityat/perf/libs/libpthread-2.31.so" :
+    [
+      "pthread_create",
+      "pthread_mutex_lock",
+      "pthread_cond_broadcast",
+      "pthread_cond_wait",
+      "pthread_mutex_unlock",
+      "pthread_barrier_wait",
+      "pthread_cond_signal",
+      "pthread_mutex_trylock"
+    ]
+  },
+  "kretprobe" :
+  [
+    "schedule"
+  ],
+  "kprobe" :
+  [
+    "schedule"
+  ]
+}
